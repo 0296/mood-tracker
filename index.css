@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Instrument Sans', sans-serif;
+  
+  --color-purple-gradient-from: #9D1CF1;
+  --color-purple-gradient-via: #CF219F;
+  --color-purple-gradient-to: #E4007B;
+
+  --color-bg-gradient-from: #FCF3F9;
+  --color-bg-gradient-to: #F1F5FE;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.emoji-purple {
+  background: #FF7DC7;
+  box-shadow: inset -6px -6px 0px rgba(0, 0, 0, 0.04);
+}
+
+.emoji-yellow {
+  background: #A45EFF;
+  box-shadow: inset -6px -6px 0px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out infinite; animation-delay: 3s; }
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-border-flow {
+  background: linear-gradient(90deg, #7292D5, #FF73D5, #FB6C32, #48C786, #FCBC34, #904E0C, #7292D5);
+  background-size: 300% 300%;
+  animation: border-flow 4s linear infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
+
